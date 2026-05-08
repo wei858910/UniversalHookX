@@ -1,4 +1,4 @@
-// dear imgui, v1.89.2
+﻿// dear imgui, v1.89.2
 // (demo code)
 
 // Help:
@@ -77,6 +77,9 @@ Index of this file:
 // [SECTION] Example App: Documents Handling / ShowExampleAppDocuments()
 
 */
+
+// 放在所有代码最前面，强制编译器把字符串当 UTF-8
+#pragma execution_character_set("utf-8")
 
 #if defined(_MSC_VER) && !defined(_CRT_SECURE_NO_WARNINGS)
 #define _CRT_SECURE_NO_WARNINGS
@@ -399,7 +402,7 @@ void ImGui::ShowDemoWindow(bool* p_open)
     IMGUI_DEMO_MARKER("Help");
     if (ImGui::CollapsingHeader("Help"))
     {
-        ImGui::Text("ABOUT THIS DEMO:");
+        ImGui::Text("关于DEMO:");
         ImGui::BulletText("Sections below are demonstrating many aspects of the library.");
         ImGui::BulletText("The \"Examples\" menu above leads to more demo contents.");
         ImGui::BulletText("The \"Tools\" menu above gives access to: About Box, Style Editor,\n"
